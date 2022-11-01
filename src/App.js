@@ -4,13 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 
-const greeterAddress = '0x5fbdb2315678afecb367f032d93f642f64180aa3';
+const greeterAddress = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512';
 
 function App() {
-  const [greeting, setGreetingValue] = useState();
+  const [greeting, setGreetingValue] = useState('');
 
   async function requestAccount() {
-    await window.ethereum.requst({ method: 'eth_requestAccounts' });
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
   }
 
   async function fetchGreeting() {
@@ -52,7 +52,7 @@ function App() {
         <input
           onChange={(e) => setGreetingValue(e.target.value)}
           placeholder='Set greeting'
-          value=''
+          value={greeting}
         />
       </header>
     </div>
