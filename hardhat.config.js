@@ -1,7 +1,10 @@
 require('@nomicfoundation/hardhat-toolbox');
 
 /** @type import('hardhat/config').HardhatUserConfig */
-
+console.log(
+  process.env.REACT_DAPP_ACCOUNT_KEY,
+  'process.env.REACT_DAPP_ACCOUNT_KEY'
+);
 module.exports = {
   solidity: '0.8.17',
   paths: {
